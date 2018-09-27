@@ -2,14 +2,19 @@
 <html>
 <head>
 <title>Blockly example</title>
+
+<!-- Core block  sets--> 
 <script src="blockly_compressed.js"></script>
 <script src="blocks_compressed.js"></script>
+
+<!-- User language --> 
 <script src="msg/js/en.js"></script>
 </head>
 <body>
     <h1>Et dejligt eksempel til Karl...</h1>
     <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
 
+    <!-- toolbox structure -->
     <xml id="toolbox" style="display: none">
         <block type="controls_if"></block>
         <block type="controls_repeat_ext"></block>
@@ -19,10 +24,11 @@
         <block type="text"></block>
     </xml>
 
+    <!-- Injecting Blockly -->
     <script>
-            var workspace = Blockly.inject('blocklyDiv',
-                {toolbox: document.getElementById('toolbox')});
-          </script>
+        var workspace = Blockly.inject('blocklyDiv',
+            {toolbox: document.getElementById('toolbox')});
+    </script>
 
 </body>
 </html>
